@@ -26,7 +26,7 @@ type SearchParams struct {
 }
 
 // Search for tabs on UG
-func (s *Scraper) Search(params SearchParams) (SearchResult, error) {
+func (s *Scraper) Search(params SearchParams, headers [][]string) (SearchResult, error) {
 	searchResult := SearchResult{}
 	v, err := query.Values(params)
 	if err != nil {
@@ -40,8 +40,10 @@ func (s *Scraper) Search(params SearchParams) (SearchResult, error) {
 	if err != nil {
 		return searchResult, err
 	}
-
 	s.ConfigureHeaders(req)
+	for _, header := range headers {
+		req.Header.Add(header[0], header[1])
+	}
 
 	res, err := s.Client.Do(req)
 	if err != nil {
