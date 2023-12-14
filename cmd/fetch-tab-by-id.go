@@ -5,7 +5,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/Pilfer/ultimate-guitar-scraper/pkg/ultimateguitar"
+	"github.com/t0mk/ultimate-guitar-scraper/pkg/ultimateguitar"
 	"github.com/urfave/cli"
 )
 

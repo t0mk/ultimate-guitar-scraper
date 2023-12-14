@@ -11,7 +11,7 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/Pilfer/ultimate-guitar-scraper/pkg/ultimateguitar"
+	"github.com/t0mk/ultimate-guitar-scraper/pkg/ultimateguitar"
 	"github.com/urfave/cli"
 	"golang.org/x/term"
 )

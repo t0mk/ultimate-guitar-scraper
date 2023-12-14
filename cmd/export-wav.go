@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/Pilfer/ultimate-guitar-scraper/pkg/ultimateguitar"
+	"github.com/t0mk/ultimate-guitar-scraper/pkg/ultimateguitar"
 	"github.com/faiface/beep"
 	"github.com/faiface/beep/wav"
 	"github.com/timiskhakov/music/guitar"

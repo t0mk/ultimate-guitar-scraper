@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/Pilfer/ultimate-guitar-scraper/cmd"
+	"github.com/t0mk/ultimate-guitar-scraper/cmd"
 	"github.com/urfave/cli"
 )
 

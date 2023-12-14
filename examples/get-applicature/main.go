@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/Pilfer/ultimate-guitar-scraper/pkg/ultimateguitar"
+	"github.com/t0mk/ultimate-guitar-scraper/pkg/ultimateguitar"
 )
 
 func main() {

@@ -1,4 +1,4 @@
-module github.com/Pilfer/ultimate-guitar-scraper
+module github.com/t0mk/ultimate-guitar-scraper
 
 go 1.17
 
