@@ -6,8 +6,6 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-
-	"github.com/cheggaaa/pb/v3"
 )
 
 // GetAll - Fetches all the tabs/songs saved by user on UG
@@ -24,7 +22,7 @@ func (s *Scraper) GetAll() ([]TabResult, error) {
 	}
 
 	s.ConfigureHeaders(req)
-	
+
 	res, err := s.Client.Do(req)
 	if err != nil {
 		return tabResults, err
@@ -37,17 +35,14 @@ func (s *Scraper) GetAll() ([]TabResult, error) {
 		return tabResults, err
 	}
 
-
-	bar := pb.Simple.Start(len(tabListings))
+	//bar := pb.Simple.Start(len(tabListings))
 	for i := 0; i < len(tabListings); i++ {
-		bar.Increment()
 		tabResult, err := s.GetTabByID(int64(tabListings[i].Tab.ID))
 		if err != nil {
 			continue
 		}
 		tabResults = append(tabResults, tabResult)
 	}
-	bar.Finish()
 	return tabResults, err
 }
 
